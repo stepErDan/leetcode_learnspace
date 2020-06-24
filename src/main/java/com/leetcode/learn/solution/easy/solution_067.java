@@ -22,7 +22,7 @@ package com.leetcode.learn.solution.easy;
  *
  */
 public class solution_067 {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         addBinary("11","1");
     }
 
@@ -32,7 +32,7 @@ public class solution_067 {
      * @param b
      * @return
      */
-    public String addBinary(String a, String b) {
+    public static String addBinary(String a, String b) {
         StringBuffer num = new StringBuffer();
         char[] as = a.toCharArray();
         char[] bs = b.toCharArray();

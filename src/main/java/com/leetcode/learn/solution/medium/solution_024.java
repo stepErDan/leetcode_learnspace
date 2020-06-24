@@ -19,7 +19,7 @@ import com.leetcode.learn.model.ListNode;
  *
  */
 public class solution_024 {
-    public void main(String[] args) {
+    public static void main(String[] args) {
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
@@ -35,7 +35,7 @@ public class solution_024 {
      *     ListNode(int x) { val = x; }
      * }
      */
-    public ListNode swapPairs(ListNode head) {
+    public static ListNode swapPairs(ListNode head) {
         //交换双方的地址
         return swap(head);
     }
@@ -45,7 +45,7 @@ public class solution_024 {
      * @param head
      * @return
      */
-    public ListNode swap(ListNode head){
+    public static ListNode swap(ListNode head){
         if(head == null || head.next == null){
             return head;
         }
