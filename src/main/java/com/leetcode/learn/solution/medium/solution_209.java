@@ -22,7 +22,7 @@ import java.util.Arrays;
  */
 public class solution_209 {
     public static void main(String[] args) {
-        minSubArrayLen(4,new int[]{10,2,2});
+        minSubArrayLen_2(7,new int[]{2,3,1,2,4,3});
     }
 
     /**
@@ -60,5 +60,39 @@ public class solution_209 {
             }while(num < s);
         }
         return minLen;
+    }
+
+    /**
+     * 官方解法：前缀和 + 二分查找
+     * 看了大半天，实际跑过才明白思路，这个二分查找妙啊，未找到取返回索引相反数-1，找到直接定位，与i相减取长度。
+     * @param s
+     * @param nums
+     * @return
+     */
+    public static int minSubArrayLen_2(int s, int[] nums) {
+        int n = nums.length;
+        if (n == 0) {
+            return 0;
+        }
+        int ans = Integer.MAX_VALUE;
+        int[] sums = new int[n + 1];
+        // 为了方便计算，令 size = n + 1
+        // sums[0] = 0 意味着前 0 个元素的前缀和为 0
+        // sums[1] = A[0] 前 1 个元素的前缀和为 A[0]
+        // 以此类推
+        for (int i = 1; i <= n; i++) {
+            sums[i] = sums[i - 1] + nums[i - 1];
+        }
+        for (int i = 1; i <= n; i++) {
+            int target = s + sums[i - 1];
+            int bound = Arrays.binarySearch(sums, target);
+            if (bound < 0) {
+                bound = -bound - 1;
+            }
+            if (bound <= n) {
+                ans = Math.min(ans, bound - (i - 1));
+            }
+        }
+        return ans == Integer.MAX_VALUE ? 0 : ans;
     }
 }
