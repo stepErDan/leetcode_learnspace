@@ -35,6 +35,49 @@ public class solution_041 {
         firstMissingPositive(new int[]{1,2,0});
     }
 
+    /**
+     * 解二：符合复杂度要求
+     * @param nums
+     * @return
+     */
+    public int firstMissingPositive_2(int[] nums) {
+        if(nums == null || nums.length == 0){
+            return 1;
+        }
+        int index = 0;
+        //存放顺序数组
+        int[] copy = new int[nums.length];
+        Arrays.sort(nums);
+        //索引定位到第一个正整数
+        for(int i = 0,j = nums.length - 1,k = 0;i < nums.length;i++){
+            if(nums[i] > 0){
+                //与前一个一致的放到copy后方
+                if(i > 0 && nums[i] == nums[i - 1]){
+                    copy[j] = nums[i];
+                    j--;
+                }else{
+                    //copy顺序存放顺序整数
+                    copy[k] = nums[i];
+                    k++;
+                }
+            }
+        }
+        for(int i = 1;i > 0;i++){
+            //查看index是否与i一致
+            if(copy.length >= i && copy[i - 1] != i){
+                return i;
+            }else if(copy.length < i){
+                return i;
+            }
+        }
+        return index;
+    }
+
+    /**
+     * 解一：算法时间复杂度O(n^2)
+     * @param nums
+     * @return
+     */
     public static int firstMissingPositive(int[] nums) {
         int index = 0;
         Arrays.sort(nums);

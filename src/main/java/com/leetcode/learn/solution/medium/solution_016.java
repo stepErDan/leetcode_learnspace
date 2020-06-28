@@ -1,10 +1,6 @@
 package com.leetcode.learn.solution.medium;
 
-import com.leetcode.learn.model.ListNode;
-
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * 16. 最接近的三数之和
