@@ -1,6 +1,7 @@
 package com.leetcode.learn.solution.easy;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -24,9 +25,10 @@ import java.util.List;
  * 链接：https://leetcode-cn.com/problems/pascals-triangle
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class solution_118 {
+public class solution_118_119 {
     public static void main(String[] args) {
         generate(5);
+        generate_pp(3);
     }
 
     /**
@@ -49,5 +51,25 @@ public class solution_118 {
             result.add(item);
         }
         return result;
+    }
+
+    /**
+     * 加强版，空间复杂度O(k)
+     * @param rowIndex
+     * @return
+     */
+    private static List<Integer> generate_pp(int rowIndex) {
+        Integer[] item = new Integer[rowIndex + 1];
+        for(int i = 1;i <= (rowIndex + 1);i++ ){
+            for(int j = i;j >= 1;j--){
+                //在左右两边，为1
+                if(j == 1 || j == i){
+                    item[j - 1] = 1;
+                }else{
+                    item[j - 1] = item[j - 1 - 1] + item[j - 1];
+                }
+            }
+        }
+        return Arrays.asList(item);
     }
 }
