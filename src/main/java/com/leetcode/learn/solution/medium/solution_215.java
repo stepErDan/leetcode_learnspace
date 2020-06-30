@@ -43,8 +43,7 @@ public class solution_215 {
     }
 
     /**
-     * 讲真，就是提交玩玩的。。就真的成功了。。
-     * 这题应该是考察排序的，，，？Arrays.sort不香吗
+     * 官方解答：最大堆
      * @param nums
      * @param k
      * @return
