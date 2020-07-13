@@ -27,6 +27,11 @@ public class solution_028 {
     }
 
     public int strStr(String haystack, String needle) {
+        if("".equals(needle)){
+            return 0;
+        }else if("".equals(haystack)){
+            return -1;
+        }
         int n = haystack.length() - needle.length() + 1,j;
         char[] a = haystack.toCharArray(),b = needle.toCharArray();
         for(int i = 0;i < n;i++){
