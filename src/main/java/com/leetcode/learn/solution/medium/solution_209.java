@@ -63,6 +63,26 @@ public class solution_209 {
     }
 
     /**
+     * 刷探索的时候又刷了一遍，看看上面的代码，真的进步了啊
+     * @param s
+     * @param nums
+     * @return
+     */
+    public int minSubArrayLen_3(int s, int[] nums) {
+        int l = 0,r = 0,len = Integer.MAX_VALUE,num = 0;
+        while(l < nums.length){
+            while(num < s && r < nums.length){
+                num += nums[r++];
+            }
+            if(num < s)
+                return len == Integer.MAX_VALUE?0:len;
+            len = Math.min(len,r - l);
+            num = num - nums[l++];
+        }
+        return len == Integer.MAX_VALUE?0:len;
+    }
+
+    /**
      * 官方解法：前缀和 + 二分查找
      * 看了大半天，实际跑过才明白思路，这个二分查找妙啊，未找到取返回索引相反数-1，找到直接定位，与i相减取长度。
      * @param s
