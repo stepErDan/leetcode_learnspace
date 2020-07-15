@@ -31,17 +31,17 @@ import java.util.HashMap;
  */
 public class solution_070 {
     public static void main(String[] args) {
-        System.out.println(climbStairs(4));
+        System.out.println(new solution_070().climbStairs(4));
     }
 
-    private static HashMap<Integer,Integer> map = new HashMap();
+    private HashMap<Integer,Integer> map = new HashMap();
 
     /**
      * 递归
      * @param n
      * @return
      */
-    private static int climbStairs(int n) {
+    private int climbStairs(int n) {
         if(map.containsKey(n)){
             return map.get(n);
         }

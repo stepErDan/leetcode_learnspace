@@ -1,8 +1,5 @@
 package com.leetcode.learn.solution.medium;
 
-
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.*;
 
 /**
@@ -36,7 +33,7 @@ import java.util.*;
 public class solution_139 {
     public static void main(String[] args) {
         String[] wordDict = {"a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"};
-        System.out.println(wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", Arrays.asList(wordDict)));
+        System.out.println(new solution_139().wordBreak("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab", Arrays.asList(wordDict)));
     }
 
     /**
@@ -47,7 +44,7 @@ public class solution_139 {
      * @param wordDict
      * @return
      */
-    public static boolean wordBreak(String s, List<String> wordDict) {
+    public boolean wordBreak(String s, List<String> wordDict) {
         //先转为set
         Set<String> wordDictSet = new HashSet(wordDict);
         //创建dp
@@ -70,7 +67,7 @@ public class solution_139 {
      * @param wordDict
      * @return
      */
-    public static boolean wordBreak_e(String s, List<String> wordDict) {
+    public boolean wordBreak_e(String s, List<String> wordDict) {
         if("".equals(s)){
             return true;
         }
@@ -85,18 +82,4 @@ public class solution_139 {
         return false;
     }
 
-    public static boolean forWordDict(String s,List<String> wordDict,int start,boolean[] memo){
-//        for(int end = start + 1;end < s.length();end++){
-//            if(memo[start] !== undefine){
-//
-//            }
-//            //存在此字符串
-//            if(wordDict.contains(s.substring(start,end))){
-//                forWordDict(s,wordDict,end,memo);
-//            }else if(s.indexOf(wordDict.get(i)) > 0){
-//                continue;
-//            }
-//        }
-        return false;
-    }
 }

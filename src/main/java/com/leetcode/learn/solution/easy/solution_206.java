@@ -2,9 +2,6 @@ package com.leetcode.learn.solution.easy;
 
 import com.leetcode.learn.model.ListNode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 反转一个单链表。
  *
@@ -23,7 +20,7 @@ import java.util.List;
 public class solution_206 {
     public static void main(String[] args) {
         ListNode head = new ListNode(new int[]{1, 2, 3, 4, 5});
-        reverseList(head);
+        new solution_206().reverseList(head);
     }
 
     /**
@@ -31,7 +28,7 @@ public class solution_206 {
      * @param head
      * @return
      */
-    private static ListNode reverseList_1(ListNode head){
+    private ListNode reverseList_1(ListNode head){
         ListNode curr = head;
         ListNode prev = null;
         while(curr != null){
@@ -51,7 +48,7 @@ public class solution_206 {
      * @param head
      * @return
      */
-    private static ListNode reverseList(ListNode head) {
+    private ListNode reverseList(ListNode head) {
         if(head == null)
             return head;
         return swap(head,head.next);

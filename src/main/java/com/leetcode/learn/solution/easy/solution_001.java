@@ -1,8 +1,6 @@
 package com.leetcode.learn.solution.easy;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -26,7 +24,7 @@ import java.util.Map;
  */
 public class solution_001 {
     public static void main(String[] args) {
-        twoSum(new int[]{2, 7, 11, 15}, 9);
+        new solution_001().twoSum(new int[]{2, 7, 11, 15}, 9);
     }
 
     /**
@@ -36,7 +34,7 @@ public class solution_001 {
      * @param target
      * @return
      */
-    public static int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {
         for (int i = 0; i < nums.length; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if ((nums[i] + nums[j]) == target) {

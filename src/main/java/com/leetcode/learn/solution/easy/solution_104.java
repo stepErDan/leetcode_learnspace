@@ -2,9 +2,6 @@ package com.leetcode.learn.solution.easy;
 
 import com.leetcode.learn.model.TreeNode;
 
-import java.util.Deque;
-import java.util.LinkedList;
-
 /**
  * 给定一个二叉树，找出其最大深度。
  *
@@ -28,7 +25,7 @@ import java.util.LinkedList;
  */
 public class solution_104 {
     public static void main(String[] args) {
-        maxDepth(new TreeNode(new Integer[]{0}));
+        new solution_104().maxDepth(new TreeNode(new Integer[]{0}));
     }
 
     /**
@@ -46,14 +43,14 @@ public class solution_104 {
         }
     }
 
-    private static int deep = 1;
-    private static int index = 1;
+    private int deep = 1;
+    private int index = 1;
     /**
      * 莫名其妙的[0]不给过,测试正常提交就不行了
      * @param root
      * @return
      */
-    private static int maxDepth(TreeNode root) {
+    private int maxDepth(TreeNode root) {
         if(root == null){
             return index--;
         }

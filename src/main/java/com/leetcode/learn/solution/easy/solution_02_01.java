@@ -3,9 +3,7 @@ package com.leetcode.learn.solution.easy;
 import com.leetcode.learn.model.ListNode;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * 面试题 02.01. 移除重复节点
@@ -38,10 +36,10 @@ import java.util.Map;
 public class solution_02_01 {
     public static void main(String[] args) {
         ListNode head = new ListNode(new int[]{1, 2, 3, 3, 2, 1});
-        removeDuplicateNodes(head);
+        new solution_02_01().removeDuplicateNodes(head);
     }
 
-    private static ListNode removeDuplicateNodes(ListNode head) {
+    private ListNode removeDuplicateNodes(ListNode head) {
         List<Integer> nodes = new ArrayList();
         if(head != null){
             nodes.add(head.val);
@@ -50,7 +48,7 @@ public class solution_02_01 {
         return head;
     }
 
-    private static void check(ListNode head, List<Integer> nodes){
+    private void check(ListNode head, List<Integer> nodes){
         if(head.next == null){
             return;
         }

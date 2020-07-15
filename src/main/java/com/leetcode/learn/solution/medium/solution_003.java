@@ -1,8 +1,6 @@
 package com.leetcode.learn.solution.medium;
 
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
@@ -32,11 +30,11 @@ import java.util.Set;
  */
 public class solution_003 {
     public static void main(String[] args) {
-        lengthOfLongestSubstring_3("abcabcbb");
+        new solution_003().lengthOfLongestSubstring_3("abcabcbb");
     }
 
 
-    private static int lengthOfLongestSubstring(String s) {
+    private int lengthOfLongestSubstring(String s) {
         if("".equals(s)){
             return 0;
         }
@@ -90,8 +88,7 @@ public class solution_003 {
      * @param s
      * @return
      */
-    private static int lengthOfLongestSubstring_3(String s) {
-
+    private int lengthOfLongestSubstring_3(String s) {
         int[] freq = new int[256];
 
         int l = 0, r = -1;

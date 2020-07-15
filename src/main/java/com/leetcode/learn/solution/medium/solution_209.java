@@ -22,7 +22,7 @@ import java.util.Arrays;
  */
 public class solution_209 {
     public static void main(String[] args) {
-        minSubArrayLen_2(7,new int[]{2,3,1,2,4,3});
+        new solution_209().minSubArrayLen_2(7,new int[]{2,3,1,2,4,3});
     }
 
     /**
@@ -33,7 +33,7 @@ public class solution_209 {
      * @param nums
      * @return
      */
-    public static int minSubArrayLen(int s, int[] nums) {
+    public int minSubArrayLen(int s, int[] nums) {
         if(nums.length < 2){
             return 0;
         }
@@ -89,7 +89,7 @@ public class solution_209 {
      * @param nums
      * @return
      */
-    public static int minSubArrayLen_2(int s, int[] nums) {
+    public int minSubArrayLen_2(int s, int[] nums) {
         int n = nums.length;
         if (n == 0) {
             return 0;

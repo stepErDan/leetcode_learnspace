@@ -24,7 +24,7 @@ public class solution_024 {
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
         head.next.next.next = new ListNode(4);
-        swapPairs(head);
+        new solution_024().swapPairs(head);
     }
 
     /**
@@ -35,7 +35,7 @@ public class solution_024 {
      *     ListNode(int x) { val = x; }
      * }
      */
-    public static ListNode swapPairs(ListNode head) {
+    public ListNode swapPairs(ListNode head) {
         //交换双方的地址
         return swap(head);
     }

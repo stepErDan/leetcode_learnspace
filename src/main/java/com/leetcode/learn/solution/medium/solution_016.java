@@ -21,10 +21,8 @@ import java.util.Arrays;
  */
 public class solution_016 {
     public static void main(String[] args) {
-        threeSumClosest(new int[]{1,2,4,8,16,32,64,128},82);
+        new solution_016().threeSumClosest(new int[]{1,2,4,8,16,32,64,128},82);
     }
-
-
 
     /**
      * 最菜的暴力法完成打卡，今日耗时：4小时。。。。
@@ -32,7 +30,7 @@ public class solution_016 {
      * @param target
      * @return
      */
-    public static int threeSumClosest(int[] nums, int target) {
+    public int threeSumClosest(int[] nums, int target) {
         //定义存放绝对值的数组
         int abs = Math.abs(nums[0] + nums[1] + nums[2] - target),num = nums[0] + nums[1] + nums[2],newAbs;
         //遍历处理

@@ -1,7 +1,6 @@
 package com.leetcode.learn.solution.hard;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * 给你一个未排序的整数数组，请你找出其中没有出现的最小的正整数。
@@ -32,7 +31,7 @@ import java.util.List;
  */
 public class solution_041 {
     public static void main(String[] args) {
-        firstMissingPositive(new int[]{1,2,0});
+        new solution_041().firstMissingPositive(new int[]{1,2,0});
     }
 
     /**
@@ -78,7 +77,7 @@ public class solution_041 {
      * @param nums
      * @return
      */
-    public static int firstMissingPositive(int[] nums) {
+    public int firstMissingPositive(int[] nums) {
         int index = 0;
         Arrays.sort(nums);
         boolean flag = false;

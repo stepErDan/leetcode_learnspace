@@ -25,7 +25,7 @@ import java.util.*;
  */
 public class solution_716 {
     public static void main(String[] args) {
-        findLength_3(new int[]{1,2,3,2,1},new int[]{3,2,1,4,7});
+        new solution_716().findLength_3(new int[]{1,2,3,2,1},new int[]{3,2,1,4,7});
     }
 
     private static final long MOD = 1000000007;
@@ -37,7 +37,7 @@ public class solution_716 {
      * @param B
      * @return
      */
-    public static int findLength_3(int[] A, int[] B) {
+    public int findLength_3(int[] A, int[] B) {
         int l = 0;
         int r = A.length + 1;
         while (r - l > 1) {
@@ -51,7 +51,7 @@ public class solution_716 {
         return l;
     }
 
-    private static boolean find(int[] A, int[] B, int k) {
+    private boolean find(int[] A, int[] B, int k) {
         if (k > A.length || k > B.length) {
             return false;
         }
@@ -100,7 +100,7 @@ public class solution_716 {
         return false;
     }
 
-    private static boolean check(int[] A, int[] B, List<Integer> list, int startB, int k) {
+    private boolean check(int[] A, int[] B, List<Integer> list, int startB, int k) {
         for (int startA : list) {
             if (checkHelper(A, B, startA, startB, k)) {
                 return true;
@@ -109,7 +109,7 @@ public class solution_716 {
         return false;
     }
 
-    private static boolean checkHelper(int[] A, int[] B, int startA, int startB, int k) {
+    private boolean checkHelper(int[] A, int[] B, int startA, int startB, int k) {
         for (int i = 0; i < k; ++i) {
             if (startA + i >= A.length || startB + i >= B.length
                     || A[startA + i] != B[startB + i]) {
@@ -125,7 +125,7 @@ public class solution_716 {
      * @param B
      * @return
      */
-    private static int findLength_2(int[] A, int[] B) {
+    private int findLength_2(int[] A, int[] B) {
         int max = 0;
         int[] dp = new int[B.length + 1];
         for (int i = 1; i <= A.length; i++) {
@@ -146,7 +146,7 @@ public class solution_716 {
      * @param B
      * @return
      */
-    private static int findLength(int[] A, int[] B) {
+    private int findLength(int[] A, int[] B) {
         for(int i = 0;i < A.length;i++){
             for(int j = 0; j <= i;j++){
                 if(check(Arrays.copyOfRange(A,j,j + (A.length - i)),B)){
@@ -160,7 +160,7 @@ public class solution_716 {
     //比较数组B中是否包含A
     //A：比较数组
     //B：目标数组
-    private static boolean check(int[] A, int[] B){
+    private boolean check(int[] A, int[] B){
         //遍历B
         for(int i = 0;i <= B.length - A.length;i++){
             //比较第一个值相等，继续

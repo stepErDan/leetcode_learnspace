@@ -27,8 +27,8 @@ import java.util.List;
  */
 public class solution_118_119 {
     public static void main(String[] args) {
-        generate(5);
-        generate_pp(3);
+        new solution_118_119().generate(5);
+        new solution_118_119().generate_pp(3);
     }
 
     /**
@@ -36,7 +36,7 @@ public class solution_118_119 {
      * @param numRows
      * @return
      */
-    private static List<List<Integer>> generate(int numRows) {
+    private List<List<Integer>> generate(int numRows) {
         List<List<Integer>> result = new ArrayList();
         for(int i = 1;i <= numRows;i++ ){
             List<Integer> item = new ArrayList();
@@ -58,7 +58,7 @@ public class solution_118_119 {
      * @param rowIndex
      * @return
      */
-    private static List<Integer> generate_pp(int rowIndex) {
+    private List<Integer> generate_pp(int rowIndex) {
         Integer[] item = new Integer[rowIndex + 1];
         for(int i = 1;i <= (rowIndex + 1);i++ ){
             for(int j = i;j >= 1;j--){

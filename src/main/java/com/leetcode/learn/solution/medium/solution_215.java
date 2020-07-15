@@ -27,7 +27,7 @@ import java.util.PriorityQueue;
  */
 public class solution_215 {
     public static void main(String[] args) {
-        findKthLargest_1(new int[]{2,2,1,3,4,3},2);
+        new solution_215().findKthLargest_1(new int[]{2,2,1,3,4,3},2);
     }
 
     /**
@@ -37,7 +37,7 @@ public class solution_215 {
      * @param k
      * @return
      */
-    public static int findKthLargest(int[] nums, int k) {
+    public int findKthLargest(int[] nums, int k) {
         Arrays.sort(nums);
         return nums[nums.length - k];
     }
@@ -48,7 +48,7 @@ public class solution_215 {
      * @param k
      * @return
      */
-    public static int findKthLargest_1(int[] nums, int k) {
+    public int findKthLargest_1(int[] nums, int k) {
         PriorityQueue<Integer> heap = new PriorityQueue<>(Comparator.comparingInt(n -> n));
         for(int n : nums){
             heap.add(n);

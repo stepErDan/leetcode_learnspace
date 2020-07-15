@@ -2,8 +2,6 @@ package com.leetcode.learn.solution.easy;
 
 import com.leetcode.learn.model.TreeNode;
 
-import java.util.HashMap;
-
 /**
  * 将一个按照升序排列的有序数组，转换为一棵高度平衡二叉搜索树。
  *
@@ -27,14 +25,14 @@ import java.util.HashMap;
  */
 public class solution_108 {
     public static void main(String[] args) {
-        System.out.println(sortedArrayToBST(new int[]{4}));
+        System.out.println(new solution_108().sortedArrayToBST(new int[]{4}));
     }
 
-    private static TreeNode sortedArrayToBST(int[] nums) {
+    private TreeNode sortedArrayToBST(int[] nums) {
         return helper(nums, 0, nums.length - 1);
     }
 
-    private static TreeNode helper(int[] nums, int left, int right) {
+    private TreeNode helper(int[] nums, int left, int right) {
         if (left > right) {
             return null;
         }

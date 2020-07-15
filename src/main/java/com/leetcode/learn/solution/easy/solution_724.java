@@ -1,8 +1,5 @@
 package com.leetcode.learn.solution.easy;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * 给定一个整数类型的数组 nums，请编写一个能够返回数组 “中心索引” 的方法。
  *

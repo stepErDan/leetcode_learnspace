@@ -2,9 +2,6 @@ package com.leetcode.learn.solution.easy;
 
 import com.leetcode.learn.model.ListNode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * 将两个升序链表合并为一个新的 升序 链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。 
  *
@@ -19,7 +16,7 @@ import java.util.Map;
  */
 public class solution_021 {
     public static void main(String[] args) {
-        mergeTwoLists(new ListNode(new int[]{1,2,4}), new ListNode(new int[]{1,3,4}));
+        new solution_021().mergeTwoLists(new ListNode(new int[]{1,2,4}), new ListNode(new int[]{1,3,4}));
     }
 
     /**
@@ -28,7 +25,7 @@ public class solution_021 {
      * @param l2
      * @return
      */
-    public static ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if(l1 == null){
             return l2;
         }else if(l2 == null){

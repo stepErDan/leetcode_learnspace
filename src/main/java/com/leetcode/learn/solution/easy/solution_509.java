@@ -1,8 +1,6 @@
 package com.leetcode.learn.solution.easy;
 
-import java.util.Deque;
 import java.util.HashMap;
-import java.util.LinkedList;
 
 /**
  * 斐波那契数，通常用 F(n) 表示，形成的序列称为斐波那契数列。该数列由 0 和 1 开始，后面的每一项数字都是前面两项数字的和。也就是：
@@ -36,17 +34,17 @@ import java.util.LinkedList;
  */
 public class solution_509 {
     public static void main(String[] args) {
-        System.out.println(fib(4));
+        System.out.println(new solution_509().fib(4));
     }
 
-    private static HashMap<Integer,Integer> map = new HashMap();
+    private HashMap<Integer,Integer> map = new HashMap();
 
     /**
      * 递归法
      * @param N
      * @return
      */
-    private static int fib(int N) {
+    private int fib(int N) {
         if(map.containsKey(N)){
             return map.get(N);
         }
@@ -67,7 +65,7 @@ public class solution_509 {
      * @param N
      * @return
      */
-    private static int fib_2(int N) {
+    private int fib_2(int N) {
         if(N < 2){
             return N;
         }

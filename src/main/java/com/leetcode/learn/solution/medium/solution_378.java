@@ -34,7 +34,7 @@ public class solution_378 {
                 {11, 22, 222},
                 {12, 33, 333}
         };
-        kthSmallest(matrix,8);
+        new solution_378().kthSmallest(matrix,8);
     }
 
     /**
@@ -43,7 +43,7 @@ public class solution_378 {
      * @param k
      * @return
      */
-    private static int kthSmallest(int[][] matrix, int k) {
+    private int kthSmallest(int[][] matrix, int k) {
         int len = matrix.length;
         int left = matrix[0][0];
         int right = matrix[len - 1][len - 1];
@@ -58,7 +58,7 @@ public class solution_378 {
         return left;
     }
 
-    private static boolean check(int k,int mid,int[][] matrix,int len){
+    private boolean check(int k,int mid,int[][] matrix,int len){
         int i = len - 1;
         int j = 0;
         int num = 0;

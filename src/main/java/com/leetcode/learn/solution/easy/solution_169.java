@@ -1,7 +1,5 @@
 package com.leetcode.learn.solution.easy;
 
-import java.util.HashMap;
-
 /**
  * 167. 两数之和 II - 输入有序数组
  * 给定一个已按照升序排列 的有序数组，找到两个数使得它们相加之和等于目标数。
