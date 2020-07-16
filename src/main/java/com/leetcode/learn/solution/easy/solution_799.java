@@ -40,8 +40,7 @@ import java.util.List;
  */
 public class solution_799 {
     public static void main(String[] args) {
-        System.out.println(kthGrammar_e(4,3));
-        System.out.println(kthGrammar(4,3));
+        System.out.println(new solution_799().kthGrammar(4,3));
     }
 
     /**
@@ -50,7 +49,7 @@ public class solution_799 {
      * @param K
      * @return
      */
-    private static int kthGrammar_2(int N,int K){
+    private int kthGrammar_2(int N,int K){
         if (N == 1) return 0;
         return (~K & 1) ^ kthGrammar(N-1, (K+1)/2);
     }
@@ -61,12 +60,12 @@ public class solution_799 {
      * @param K
      * @return
      */
-    private static int kthGrammar(int N, int K) {
+    private int kthGrammar(int N, int K) {
         int len = 1 << (N - 1 - 1);
         return loop_2(K,len);
     }
 
-    private static int loop_2(int k,int len){
+    private int loop_2(int k,int len){
         if(k == 2){
             return 1;
         }else if(k == 1){
@@ -86,13 +85,13 @@ public class solution_799 {
      * @param K
      * @return
      */
-    private static int kthGrammar_e(int N, int K) {
+    private int kthGrammar_e(int N, int K) {
         List c = new ArrayList();
         loop(N,c);
         return (int) c.get(K - 1);
     }
 
-    private static int loop(int n, List c){
+    private int loop(int n, List c){
         if(n == 1){
             c.add(0);
             return 1;
