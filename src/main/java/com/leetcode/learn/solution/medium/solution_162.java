@@ -1,5 +1,7 @@
 package com.leetcode.learn.solution.medium;
 
+import java.util.Arrays;
+
 /**
  * 峰值元素是指其值大于左右相邻值的元素。
  *
